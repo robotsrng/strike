@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Customer Portals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company phone</th>
+      <th>Company email</th>
+      <th>Company fax</th>
+      <th>Company website</th>
+      <th>User</th>
+      <th>Suppliers</th>
+      <th>Stock parts</th>
+      <th>Stock chits</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customer_portals.each do |customer_portal| %>
+      <tr>
+        <td><%= customer_portal.company_name %></td>
+        <td><%= customer_portal.company_phone %></td>
+        <td><%= customer_portal.company_email %></td>
+        <td><%= customer_portal.company_fax %></td>
+        <td><%= customer_portal.company_website %></td>
+        <td><%= customer_portal.user %></td>
+        <td><%= customer_portal.suppliers %></td>
+        <td><%= customer_portal.stock_parts %></td>
+        <td><%= customer_portal.stock_chits %></td>
+        <td><%= link_to 'Show', customer_portal %></td>
+        <td><%= link_to 'Edit', edit_customer_portal_path(customer_portal) %></td>
+        <td><%= link_to 'Destroy', customer_portal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer Portal', new_customer_portal_path %>

@@ -1,0 +1,87 @@
+<%= form_with(model: stock, local: true) do |form| %>
+  <% if stock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stock.errors.count, "error") %> prohibited this stock from being saved:</h2>
+
+      <ul>
+      <% stock.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :part_number %>
+    <%= form.text_field :part_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_code %>
+    <%= form.text_field :category_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :supplier_cost %>
+    <%= form.text_field :supplier_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :minimum_qty %>
+    <%= form.number_field :minimum_qty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maximum_qty %>
+    <%= form.number_field :maximum_qty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :restock_to_level %>
+    <%= form.number_field :restock_to_level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stock_links %>
+    <%= form.text_field :stock_links %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contract_price %>
+    <%= form.text_field :contract_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_history %>
+    <%= form.text_area :user_history %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :customer_portal_id %>
+    <%= form.text_field :customer_portal_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :chits %>
+    <%= form.text_field :chits %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

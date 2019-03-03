@@ -1,0 +1,52 @@
+<%= form_with(model: chit, local: true) do |form| %>
+  <% if chit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(chit.errors.count, "error") %> prohibited this chit from being saved:</h2>
+
+      <ul>
+      <% chit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type_code %>
+    <%= form.number_field :type_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_cost %>
+    <%= form.text_field :product_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :history %>
+    <%= form.text_area :history %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stock_id %>
+    <%= form.text_field :stock_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

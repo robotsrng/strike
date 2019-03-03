@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @chit.quantity %>
+</p>
+
+<p>
+  <strong>Type code:</strong>
+  <%= @chit.type_code %>
+</p>
+
+<p>
+  <strong>Product cost:</strong>
+  <%= @chit.product_cost %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @chit.description %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @chit.notes %>
+</p>
+
+<p>
+  <strong>History:</strong>
+  <%= @chit.history %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @chit.stock %>
+</p>
+
+<%= link_to 'Edit', edit_chit_path(@chit) %> |
+<%= link_to 'Back', chits_path %>

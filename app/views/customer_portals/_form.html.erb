@@ -1,0 +1,62 @@
+<%= form_with(model: customer_portal, local: true) do |form| %>
+  <% if customer_portal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customer_portal.errors.count, "error") %> prohibited this customer_portal from being saved:</h2>
+
+      <ul>
+      <% customer_portal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company_name %>
+    <%= form.text_field :company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_phone %>
+    <%= form.text_field :company_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_email %>
+    <%= form.text_field :company_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_fax %>
+    <%= form.text_field :company_fax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_website %>
+    <%= form.text_field :company_website %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user %>
+    <%= form.text_field :user %>
+  </div>
+
+  <div class="field">
+    <%= form.label :suppliers %>
+    <%= form.text_field :suppliers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stock_parts %>
+    <%= form.text_field :stock_parts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stock_chits %>
+    <%= form.text_field :stock_chits %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

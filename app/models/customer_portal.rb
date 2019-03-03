@@ -1,0 +1,2 @@
+class CustomerPortal < ApplicationRecord
+end

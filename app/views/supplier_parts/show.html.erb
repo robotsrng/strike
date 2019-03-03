@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Part number:</strong>
+  <%= @supplier_part.part_number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @supplier_part.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @supplier_part.description %>
+</p>
+
+<p>
+  <strong>Category code:</strong>
+  <%= @supplier_part.category_code %>
+</p>
+
+<p>
+  <strong>Supplier cost:</strong>
+  <%= @supplier_part.supplier_cost %>
+</p>
+
+<p>
+  <strong>History:</strong>
+  <%= @supplier_part.history %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @supplier_part.supplier %>
+</p>
+
+<%= link_to 'Edit', edit_supplier_part_path(@supplier_part) %> |
+<%= link_to 'Back', supplier_parts_path %>
