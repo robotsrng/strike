@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :chits
-  resources :stocks
   devise_for :users
+  resources :stock_parts
+  resources :chits
   resources :customer_portals
   resources :supplier_parts
   resources :suppliers

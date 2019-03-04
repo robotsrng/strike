@@ -25,25 +25,5 @@
   <%= @customer_portal.company_website %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @customer_portal.user %>
-</p>
-
-<p>
-  <strong>Suppliers:</strong>
-  <%= @customer_portal.suppliers %>
-</p>
-
-<p>
-  <strong>Stock parts:</strong>
-  <%= @customer_portal.stock_parts %>
-</p>
-
-<p>
-  <strong>Stock chits:</strong>
-  <%= @customer_portal.stock_chits %>
-</p>
-
 <%= link_to 'Edit', edit_customer_portal_path(@customer_portal) %> |
 <%= link_to 'Back', customer_portals_path %>

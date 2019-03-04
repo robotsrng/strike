@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stock Parts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Part number</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Category code</th>
+      <th>Supplier cost</th>
+      <th>Minimum qty</th>
+      <th>Maximum qty</th>
+      <th>Restock to level</th>
+      <th>Stock links</th>
+      <th>Contract price</th>
+      <th>User history</th>
+      <th>Notes</th>
+      <th>Customer portal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stock_parts.each do |stock_part| %>
+      <tr>
+        <td><%= stock_part.part_number %></td>
+        <td><%= stock_part.name %></td>
+        <td><%= stock_part.description %></td>
+        <td><%= stock_part.category_code %></td>
+        <td><%= stock_part.supplier_cost %></td>
+        <td><%= stock_part.minimum_qty %></td>
+        <td><%= stock_part.maximum_qty %></td>
+        <td><%= stock_part.restock_to_level %></td>
+        <td><%= stock_part.stock_links %></td>
+        <td><%= stock_part.contract_price %></td>
+        <td><%= stock_part.user_history %></td>
+        <td><%= stock_part.notes %></td>
+        <td><%= stock_part.customer_portal %></td>
+        <td><%= link_to 'Show', stock_part %></td>
+        <td><%= link_to 'Edit', edit_stock_part_path(stock_part) %></td>
+        <td><%= link_to 'Destroy', stock_part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stock Part', new_stock_part_path %>

@@ -8,7 +8,6 @@ class CreateSuppliers < ActiveRecord::Migration[5.2]
       t.string :fax
       t.string :email
       t.string :website
-      t.has_many :supplier_parts
 
       t.timestamps
     end

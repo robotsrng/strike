@@ -69,6 +69,6 @@ class ChitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chit_params
-      params.require(:chit).permit(:quantity, :type_code, :product_cost, :description, :notes, :history, :stock_id)
+      params.require(:chit).permit(:quantity, :type_code, :product_cost, :description, :notes, :history, :stock_part_id)
     end
 end

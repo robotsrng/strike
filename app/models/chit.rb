@@ -1,3 +1,3 @@
 class Chit < ApplicationRecord
-  belongs_to :stock
+  belongs_to :stock_part
 end

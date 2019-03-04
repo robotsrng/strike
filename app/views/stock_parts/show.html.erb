@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Part number:</strong>
+  <%= @stock_part.part_number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stock_part.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @stock_part.description %>
+</p>
+
+<p>
+  <strong>Category code:</strong>
+  <%= @stock_part.category_code %>
+</p>
+
+<p>
+  <strong>Supplier cost:</strong>
+  <%= @stock_part.supplier_cost %>
+</p>
+
+<p>
+  <strong>Minimum qty:</strong>
+  <%= @stock_part.minimum_qty %>
+</p>
+
+<p>
+  <strong>Maximum qty:</strong>
+  <%= @stock_part.maximum_qty %>
+</p>
+
+<p>
+  <strong>Restock to level:</strong>
+  <%= @stock_part.restock_to_level %>
+</p>
+
+<p>
+  <strong>Stock links:</strong>
+  <%= @stock_part.stock_links %>
+</p>
+
+<p>
+  <strong>Contract price:</strong>
+  <%= @stock_part.contract_price %>
+</p>
+
+<p>
+  <strong>User history:</strong>
+  <%= @stock_part.user_history %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @stock_part.notes %>
+</p>
+
+<p>
+  <strong>Customer portal:</strong>
+  <%= @stock_part.customer_portal %>
+</p>
+
+<%= link_to 'Edit', edit_stock_part_path(@stock_part) %> |
+<%= link_to 'Back', stock_parts_path %>

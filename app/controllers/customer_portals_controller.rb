@@ -69,6 +69,6 @@ class CustomerPortalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_portal_params
-      params.require(:customer_portal).permit(:company_name, :company_phone, :company_email, :company_fax, :company_website, :user, :suppliers, :stock_parts, :stock_chits)
+      params.require(:customer_portal).permit(:company_name, :company_phone, :company_email, :company_fax, :company_website)
     end
 end
